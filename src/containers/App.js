@@ -1,0 +1,1 @@
+export default App from '../components/App';
