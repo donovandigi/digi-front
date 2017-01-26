@@ -1,19 +1,19 @@
 {
-  "name": "redux-minimal",
+  "name": "digiloads",
   "version": "1.0.0",
-  "description": "Start building complex react-redux apps today, with this minimalist easy to understand starter kit (boilerplate)",
+  "description": "digiloads",
   "keywords": [
-    "react",
-    "redux",
-    "minimal",
-    "starter kit",
-    "boilerplate"
+    "digiloads",
+    "broker",
+    "loads",
+    "logistics",
+    "app"
   ],
   "main": "index.js",
-  "homepage": "http://redux-minimal.js.org/",
+  "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/catalin-luntraru/redux-minimal"
+    "url": "https://github.com/donovandigi/digi-front"
   },
   "scripts": {
     "start": "webpack-dev-server --inline --hot --history-api-fallback --host localhost --port 8080",
@@ -35,7 +35,8 @@
   "author": "Catalin Luntraru",
   "license": "MIT",
   "dependencies": {
-    "react": "^15.4.1",
+    "firebase": "^3.6.7",
+    "react": "^15.4.2",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.1",
     "react-redux": "^4.4.6",

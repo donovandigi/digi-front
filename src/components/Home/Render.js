@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Jumbotron, Button } from 'react-bootstrap';
 
 import "./home.scss";
 
@@ -6,10 +7,11 @@ import "./home.scss";
 class Render extends Component{
     render(){
         return (
-            <div className="page-home">
+            <Jumbotron>
                 <h1>digiloads</h1>
-                <h2>Loads, coming soon ...</h2>
-            </div>
+                <p>Loads, coming soon ...</p>
+                <p><Button bsStyle="primary">Learn more</Button></p>
+            </Jumbotron>
         )      
     }
 }

@@ -17,3 +17,6 @@ script:
   - npm run test
   - npm run build-dev
   - npm run build-prod
+
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
