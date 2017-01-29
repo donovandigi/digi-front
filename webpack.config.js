@@ -18,12 +18,15 @@ module.exports = {
     publicPath: 'js/',
     filename: 'bundle.js',
   },
+  resolve: {
+    extensions: ['', '.js', '.jsx', '.json']
+  },
   module: {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel',
-        exclude: /node_modules/,
+        loaders: ["babel"],
+        exclude: /node_modules/
       },
       {
         // https://github.com/jtangelder/sass-loader
