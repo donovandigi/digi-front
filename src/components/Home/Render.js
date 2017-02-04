@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
 import { Jumbotron, Button } from 'react-bootstrap';
 
-import Auth from '../Forms/Auth';
-
-import "./home.scss";
-
-
 class Render extends Component{
-    render(){
-        const { loginUser } = this.props;
-        
-        return (
-            <div>
-                <Jumbotron>
-                    <h1>digiloads</h1>
-                    <p>Loads, coming soon ...</p>
-                    <p><Button bsStyle="primary">Learn more</Button></p>
-                </Jumbotron>
+    handleOnLogout = () => {
+        const { onLogout } = this.props;
 
-                <Auth loginUser={loginUser}/>
-            </div>
-        )      
+        if (onLogout) logout();
+    }
+
+    render(){
+        const {user, onLogout} = this.props;
+
+        console.log(user);
+
+        return (
+            <Jumbotron>
+                <h1>digiloads</h1>
+                <p>Welcome to digiloads</p>
+                <p><Button bsStyle="primary" onClick={onLogout}>Logout</Button></p>
+            </Jumbotron>
+        );
     }
 }
 

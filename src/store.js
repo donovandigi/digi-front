@@ -2,6 +2,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import { browserHistory } from "react-router";
 import { syncHistoryWithStore, routerMiddleware } from "react-router-redux";
 import ReduxThunk from 'redux-thunk';
+import createLogger from 'redux-logger';
 import { reducers } from "./reducers/index";
 
 // add the middlewares
@@ -11,6 +12,8 @@ let middlewares = [];
 middlewares.push(routerMiddleware(browserHistory));
 // add the thunk middleware
 middlewares.push(ReduxThunk);
+// add the logger middleware
+middlewares.push(createLogger());
 
 // apply the middleware
 let middleware = applyMiddleware(...middlewares);
