@@ -13,7 +13,6 @@ const router = (
     <Route path="/" component={App}>
       <IndexRoute component={Landing}/>
       <Route path="/home" component={Home} />
-      <Route path="/register" component={Home} />
 
       <Route path="*" component={NotFound}/>
     </Route>
