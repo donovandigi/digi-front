@@ -11,7 +11,7 @@ import NotFound from "./components/NotFound/NotFound";
 const router = (
   <Router onUpdate={() => window.scrollTo(0, 0)} history={history}>
     <Route path="/" component={App}>
-      <IndexRoute component={Landing}/>
+      <IndexRoute component={Landing} />
       <Route path="/home" component={Home} />
 
       <Route path="*" component={NotFound}/>
