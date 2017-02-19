@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "digi-front"
+    "default": "digi-front",
+    "dev": "digi-front-dev"
   }
 }
