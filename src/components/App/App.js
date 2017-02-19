@@ -2,15 +2,13 @@ import React from "react";
 import firebase from 'firebase';
 
 import Render from './Render';
-import config from '../../../config/dev';
-
-console.log(config);
+import config from '../../../config/config';
 
 // app component
 export default class App extends React.Component {
   componentWillMount() {
         // Initialize Firebase
-        firebase.initializeApp(config.firebase);
+        firebase.initializeApp(config().firebase);
   }
 
   // render
