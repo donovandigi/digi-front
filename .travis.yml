@@ -4,6 +4,9 @@ node_js:
 
 notifications:
   email: false
+  webhooks:
+    urls:
+      - https://www.vivifyscrum.com/ciintegrations/travis/859a04cae9cfad158280e9fc4ca8a9a5
 
 cache:
   directories:
@@ -19,4 +22,6 @@ script:
   - npm run build-prod
 
 after_success:
+  - test $TRAVIS_BRANCH = "master" && firebase use default
+  - test $TRAVIS_BRANCH = "master" && firebase use dev
   - firebase deploy --token $FIREBASE_TOKEN
