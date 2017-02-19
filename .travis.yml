@@ -22,5 +22,6 @@ script:
   - npm run build-prod
 
 after_success:
-  - firebase use dev
+  - test $TRAVIS_BRANCH = "master" && firebase use default
+  - test $TRAVIS_BRANCH = "master" && firebase use dev
   - firebase deploy --token $FIREBASE_TOKEN
