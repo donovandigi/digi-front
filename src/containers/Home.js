@@ -1,18 +1,20 @@
 import { connect } from 'react-redux';
 
 import Home from '../components/Home/Home';
-import {logout} from '../actions';
+import {logout, saveLoadDetails} from '../actions';
 
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        logout: () => dispatch(logout())
+        logout: () => dispatch(logout()),
+        saveLoadDetails: (loadDetails) => dispatch(saveLoadDetails(loadDetails))
     };
 }
 
 const mapStateToProps = (state) => {
     return {
-        user: state.auth.user
+        user: state.auth.user,
+        loads: state.loads.loads
     };
 }
 

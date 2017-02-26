@@ -9,3 +9,7 @@ export const REGISTER_USER_REQUEST = 'register_user_request';
 export const LOGOUT_USER_SUCCESS = 'logout_user_success';
 export const LOGOUT_USER_FAIL = 'logout_user_fail';
 export const LOGOUT_USER_REQUEST = 'logout_user_request';
+
+export const SAVE_LOAD_DETAILS_SUCCESS = 'save_load_details_success';
+export const SAVE_LOAD_DETAILS_FAIL = 'save_load_details_fail';
+export const SAVE_LOAD_DETAILS_REQUEST = 'save_load_details_request';
